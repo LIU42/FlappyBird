@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>450</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>450</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>FlappyBird</string>
+  </property>
+  <property name="windowIcon">
+   <iconset resource="../Resources/resources.qrc">
+    <normaloff>:/Images/icon.ico</normaloff>:/Images/icon.ico</iconset>
+  </property>
+  <widget class="QWidget" name="pCentralWidget">
+   <property name="styleSheet">
+    <string notr="true"/>
+   </property>
+   <widget class="GraphicsWidget" name="pGraphics">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>450</width>
+      <height>700</height>
+     </rect>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>GraphicsWidget</class>
+   <extends>QStackedWidget</extends>
+   <header>graphics.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="../Resources/resources.qrc"/>
+ </resources>
+ <connections/>
+</ui>

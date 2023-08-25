@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WelcomeWidget</class>
+ <widget class="QWidget" name="WelcomeWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-repeat: no-repeat;
+background-position: center;</string>
+  </property>
+  <widget class="QLabel" name="pTitleLabel">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>175</y>
+     <width>200</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/title.png);</string>
+   </property>
+   <property name="lineWidth">
+    <number>0</number>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pStartButton">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>525</y>
+     <width>120</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/button_play.png);
+border: 0px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pBackgroundLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>450</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>pBackgroundLabel</zorder>
+  <zorder>pTitleLabel</zorder>
+  <zorder>pStartButton</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

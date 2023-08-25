@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GameoverWidget</class>
+ <widget class="QWidget" name="GameoverWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>700</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-repeat: no-repeat;
+background-position: center;</string>
+  </property>
+  <widget class="QLabel" name="pBackgroundLabel">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>450</width>
+     <height>700</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pTitleLabel">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>175</y>
+     <width>200</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/gameover.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pPanelLabel">
+   <property name="geometry">
+    <rect>
+     <x>106</x>
+     <y>280</y>
+     <width>238</width>
+     <height>126</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/panel.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="pRestartButton">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>525</y>
+     <width>120</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/button_play.png);
+border: 0px;</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pMedalLabel">
+   <property name="geometry">
+    <rect>
+     <x>137</x>
+     <y>325</y>
+     <width>44</width>
+     <height>44</height>
+    </rect>
+   </property>
+   <property name="autoFillBackground">
+    <bool>false</bool>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="ScoreNumberWidget" name="pCurrentScoreWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>315</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="ScoreNumberWidget" name="pBestScoreWidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>238</x>
+     <y>358</y>
+     <width>80</width>
+     <height>20</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pNewRecordLabel">
+   <property name="geometry">
+    <rect>
+     <x>233</x>
+     <y>296</y>
+     <width>32</width>
+     <height>14</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/new.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <zorder>pBackgroundLabel</zorder>
+  <zorder>pTitleLabel</zorder>
+  <zorder>pPanelLabel</zorder>
+  <zorder>pRestartButton</zorder>
+  <zorder>pMedalLabel</zorder>
+  <zorder>pBestScoreWidget</zorder>
+  <zorder>pCurrentScoreWidget</zorder>
+  <zorder>pNewRecordLabel</zorder>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ScoreNumberWidget</class>
+   <extends>QWidget</extends>
+   <header>gameover.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
