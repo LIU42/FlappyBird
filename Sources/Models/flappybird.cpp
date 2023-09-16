@@ -159,7 +159,7 @@ void MainGame::restartGame()
 
 void MainGame::updateGame()
 {
-    if (status == STATUS_PLAYING)
+    if (status == STATUS_PROGRESS)
     {
         levelUp();
         updateBird();
@@ -170,7 +170,7 @@ void MainGame::updateGame()
 
 void MainGame::playingGame()
 {
-    status = STATUS_PLAYING;
+    status = STATUS_PROGRESS;
 }
 
 int MainGame::getLandScrollX()
@@ -185,7 +185,7 @@ bool MainGame::getIsNewRecord()
 
 void MainGame::addNewPipe()
 {
-    if (status == STATUS_PLAYING && bird.getIsAlive())
+    if (status == STATUS_PROGRESS && bird.getIsAlive())
     {
         pipeList.append(Pipe(pipeChannelLarge));
     }
@@ -193,7 +193,7 @@ void MainGame::addNewPipe()
 
 void MainGame::birdFlying()
 {
-    if (status == STATUS_READY || status == STATUS_PLAYING)
+    if (status == STATUS_READY || status == STATUS_PROGRESS)
     {
         bird.flying();
     }
@@ -201,7 +201,7 @@ void MainGame::birdFlying()
 
 void MainGame::birdGoingUp()
 {
-    if (status == STATUS_PLAYING && bird.getIsAlive())
+    if (status == STATUS_PROGRESS && bird.getIsAlive())
     {
         bird.goingUp();
     }

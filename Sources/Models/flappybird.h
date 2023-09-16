@@ -18,7 +18,7 @@ enum GameStatus
 {
     STATUS_WELCOME,
     STATUS_READY,
-    STATUS_PLAYING,
+    STATUS_PROGRESS,
     STATUS_GAMEOVER
 };
 

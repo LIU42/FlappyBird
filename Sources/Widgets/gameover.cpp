@@ -3,13 +3,13 @@
 
 #include <QDebug>
 
-ScoreNumberWidget::ScoreNumberWidget(QWidget* parent): QWidget(parent)
+ScoreWidget::ScoreWidget(QWidget* parent): QWidget(parent)
 {
     scoreInitX = 0;
     scoreValue = 0;
 }
 
-void ScoreNumberWidget::paintEvent(QPaintEvent* pPaintEvent)
+void ScoreWidget::paintEvent(QPaintEvent* pPaintEvent)
 {
     Q_UNUSED(pPaintEvent);
     QPainter painter(this);
@@ -29,12 +29,12 @@ void ScoreNumberWidget::paintEvent(QPaintEvent* pPaintEvent)
     }
 }
 
-void ScoreNumberWidget::setImages(GameImages* pImages)
+void ScoreWidget::setImages(GameImages* pImages)
 {
     this->pImages = pImages;
 }
 
-void ScoreNumberWidget::setScoreValue(int scoreValue)
+void ScoreWidget::setScoreValue(int scoreValue)
 {
     this->scoreValue = scoreValue;
     this->scoreInitX = geometry().width() - SCORE_NUMBER_WIDTH - SCORE_NUMBER_BORDER;

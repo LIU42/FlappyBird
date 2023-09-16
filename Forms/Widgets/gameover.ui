@@ -95,7 +95,7 @@ border: 0px;</string>
     <string/>
    </property>
   </widget>
-  <widget class="ScoreNumberWidget" name="pCurrentScoreWidget" native="true">
+  <widget class="ScoreWidget" name="pCurrentScoreWidget" native="true">
    <property name="geometry">
     <rect>
      <x>238</x>
@@ -105,7 +105,7 @@ border: 0px;</string>
     </rect>
    </property>
   </widget>
-  <widget class="ScoreNumberWidget" name="pBestScoreWidget" native="true">
+  <widget class="ScoreWidget" name="pBestScoreWidget" native="true">
    <property name="geometry">
     <rect>
      <x>238</x>
@@ -142,7 +142,7 @@ border: 0px;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>ScoreNumberWidget</class>
+   <class>ScoreWidget</class>
    <extends>QWidget</extends>
    <header>gameover.h</header>
    <container>1</container>

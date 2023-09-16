@@ -17,7 +17,7 @@ namespace Ui
 
 QT_END_NAMESPACE
 
-class ScoreNumberWidget : public QWidget
+class ScoreWidget : public QWidget
 {
     Q_OBJECT
 
@@ -36,7 +36,7 @@ class ScoreNumberWidget : public QWidget
         void paintEvent(QPaintEvent*);
 
     public:
-        ScoreNumberWidget(QWidget* parent = nullptr);
+        ScoreWidget(QWidget* parent = nullptr);
 
     public:
         void setImages(GameImages*);

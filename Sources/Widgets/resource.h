@@ -6,12 +6,12 @@
 class GameImages
 {
     friend class GraphicsWidget;
-    friend class AnimateWidget;
+    friend class SceneWidget;
     friend class WelcomeWidget;
     friend class ReadyWidget;
-    friend class PlayingWidget;
+    friend class ProgressWidget;
     friend class GameoverWidget;
-    friend class ScoreNumberWidget;
+    friend class ScoreWidget;
 
     private:
         static constexpr int THEME_COUNT = 2;

@@ -12,9 +12,8 @@ SOURCES += \
 	Sources/Models/bird.cpp \
 	Sources/Models/flappybird.cpp \
 	Sources/Models/pipe.cpp \
-	Sources/Widgets/animate.cpp \
 	Sources/Widgets/gameover.cpp \
-	Sources/Widgets/playing.cpp \
+	Sources/Widgets/progress.cpp \
 	Sources/Widgets/ready.cpp \
 	Sources/Widgets/resource.cpp \
 	Sources/Widgets/welcome.cpp \
@@ -26,9 +25,8 @@ HEADERS += \
 	Sources/Models/bird.h \
 	Sources/Models/flappybird.h \
 	Sources/Models/pipe.h \
-	Sources/Widgets/animate.h \
 	Sources/Widgets/gameover.h \
-	Sources/Widgets/playing.h \
+	Sources/Widgets/progress.h \
 	Sources/Widgets/ready.h \
 	Sources/Widgets/resource.h \
 	Sources/Widgets/welcome.h \
@@ -36,10 +34,10 @@ HEADERS += \
 	Sources/mainwindow.h
 
 FORMS += \
+	Forms/Widgets/progress.ui \
 	Forms/Widgets/welcome.ui \
 	Forms/mainwindow.ui \
 	Forms/Widgets/ready.ui \
-	Forms/Widgets/playing.ui \
 	Forms/Widgets/gameover.ui
 
 # Default rules for deployment.

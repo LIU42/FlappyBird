@@ -8,7 +8,7 @@
 #include "Widgets/resource.h"
 #include "Widgets/welcome.h"
 #include "Widgets/ready.h"
-#include "Widgets/playing.h"
+#include "Widgets/progress.h"
 #include "Widgets/gameover.h"
 
 class GraphicsWidget : public QStackedWidget
@@ -18,7 +18,7 @@ class GraphicsWidget : public QStackedWidget
     private:
         WelcomeWidget* pWelcomeWidget;
         ReadyWidget* pReadyWidget;
-        PlayingWidget* pPlayingWidget;
+        ProgressWidget* pPlayingWidget;
         GameoverWidget* pGameoverWidget;
 
     private:

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PlayingWidget</class>
- <widget class="QWidget" name="PlayingWidget">
+ <class>ProgressWidget</class>
+ <widget class="QWidget" name="ProgressWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -30,7 +30,7 @@ background-position: center;</string>
     <string/>
    </property>
   </widget>
-  <widget class="AnimateWidget" name="pAnimate" native="true">
+  <widget class="SceneWidget" name="pScene" native="true">
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -43,9 +43,9 @@ background-position: center;</string>
  </widget>
  <customwidgets>
   <customwidget>
-   <class>AnimateWidget</class>
+   <class>SceneWidget</class>
    <extends>QWidget</extends>
-   <header>animate.h</header>
+   <header>progress.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

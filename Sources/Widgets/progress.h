@@ -1,5 +1,5 @@
-#ifndef __WIDGETS_ANIMATE_H__
-#define __WIDGETS_ANIMATE_H__
+#ifndef __WIDGETS_PROGRESS_H__
+#define __WIDGETS_PROGRESS_H__
 
 #include <QWidget>
 #include <QPainter>
@@ -7,7 +7,16 @@
 #include "../Models/flappybird.h"
 #include "../Widgets/resource.h"
 
-class AnimateWidget : public QWidget
+QT_BEGIN_NAMESPACE
+
+namespace Ui
+{
+    class ProgressWidget;
+}
+
+QT_END_NAMESPACE
+
+class SceneWidget : public QWidget
 {
     Q_OBJECT
 
@@ -34,10 +43,31 @@ class AnimateWidget : public QWidget
         void paintEvent(QPaintEvent*);
 
     public:
-        AnimateWidget(QWidget* parent = nullptr);
+        SceneWidget(QWidget* parent = nullptr);
 
     public:
         void setGame(MainGame*);
         void setImages(GameImages*);
+};
+
+class ProgressWidget : public QWidget
+{
+    Q_OBJECT
+
+    private:
+        Ui::ProgressWidget* ui;
+
+    private:
+        MainGame* pGame;
+        GameImages* pImages;
+
+    public:
+        ProgressWidget(QWidget* parent = nullptr);
+        ~ProgressWidget();
+
+    public:
+        void setGame(MainGame*);
+        void setImages(GameImages*);
+        void setBackground();
 };
 #endif

@@ -14,13 +14,13 @@ ReadyWidget::~ReadyWidget()
 void ReadyWidget::setGame(MainGame* pGame)
 {
     this->pGame = pGame;
-    ui->pAnimate->setGame(pGame);
+    ui->pScene->setGame(pGame);
 }
 
 void ReadyWidget::setImages(GameImages* pImages)
 {
     this->pImages = pImages;
-    ui->pAnimate->setImages(pImages);
+    ui->pScene->setImages(pImages);
 }
 
 void ReadyWidget::setBackground()

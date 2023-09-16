@@ -28,7 +28,7 @@ void MainWindow::initialize()
 
 void MainWindow::mainInterval()
 {
-    if (pGame->getStatus() == STATUS_READY || pGame->getStatus() == STATUS_PLAYING)
+    if (pGame->getStatus() == STATUS_READY || pGame->getStatus() == STATUS_PROGRESS)
     {
         pGame->updateGame();
 
@@ -95,10 +95,10 @@ void MainWindow::mousePressEvent(QMouseEvent* pMouseEvent)
     {
         if (pGame->getStatus() == STATUS_READY)
         {
-            ui->pGraphics->setCurrentIndex(STATUS_PLAYING);
+            ui->pGraphics->setCurrentIndex(STATUS_PROGRESS);
             pGame->playingGame();
         }
-        else if (pGame->getStatus() == STATUS_PLAYING)
+        else if (pGame->getStatus() == STATUS_PROGRESS)
         {
             pGame->birdGoingUp();
         }

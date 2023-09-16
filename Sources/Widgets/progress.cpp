@@ -1,36 +1,33 @@
-#include "animate.h"
+#include "progress.h"
+#include "ui_progress.h"
 
-AnimateWidget::AnimateWidget(QWidget* parent): QWidget{parent}
+SceneWidget::SceneWidget(QWidget* parent): QWidget{parent}
 {
     pGame = nullptr;
     pImages = nullptr;
 }
 
-void AnimateWidget::setGame(MainGame* pGame)
+void SceneWidget::setGame(MainGame* pGame)
 {
     this->pGame = pGame;
 }
 
-void AnimateWidget::setImages(GameImages* pImages)
+void SceneWidget::setImages(GameImages* pImages)
 {
     this->pImages = pImages;
 }
 
-void AnimateWidget::paintBird(QPainter& painter)
+void SceneWidget::paintBird(QPainter& painter)
 {
-    BirdColor color = pGame->getBird().getColor();
-    int centerX = pGame->getBird().getCenterX();
-    int centerY = pGame->getBird().getCenterY();
-    int status = pGame->getBird().getStatus();
-    double angle = pGame->getBird().getDirectAngle();
+    Bird& bird = pGame->getBird();
 
-    painter.translate(centerX, centerY);
-    painter.rotate(angle);
-    painter.drawPixmap(-Bird::HALF_SIZE, -Bird::HALF_SIZE, pImages->birdMatrix[color][status]);
+    painter.translate(bird.getCenterX(), bird.getCenterY());
+    painter.rotate(bird.getDirectAngle());
+    painter.drawPixmap(-Bird::HALF_SIZE, -Bird::HALF_SIZE, pImages->birdMatrix[bird.getColor()][bird.getStatus()]);
     painter.resetTransform();
 }
 
-void AnimateWidget::paintLand(QPainter& painter)
+void SceneWidget::paintLand(QPainter& painter)
 {
     int landX1 = pGame->getLandScrollX();
     int landX2 = pGame->getLandScrollX() + SCREEN_WIDTH;
@@ -39,7 +36,7 @@ void AnimateWidget::paintLand(QPainter& painter)
     painter.drawPixmap(landX2, LAND_SURFACE_Y, pImages->land);
 }
 
-void AnimateWidget::paintPipes(QPainter& painter)
+void SceneWidget::paintPipes(QPainter& painter)
 {
     GameTheme theme = pGame->getTheme();
 
@@ -53,9 +50,9 @@ void AnimateWidget::paintPipes(QPainter& painter)
     }
 }
 
-void AnimateWidget::paintScore(QPainter& painter)
+void SceneWidget::paintScore(QPainter& painter)
 {
-    if (pGame->getStatus() == STATUS_PLAYING)
+    if (pGame->getStatus() == STATUS_PROGRESS)
     {
         int scoreValue = pGame->getCurrentScore();
         int scoreLength = 0;
@@ -82,7 +79,7 @@ void AnimateWidget::paintScore(QPainter& painter)
     }
 }
 
-void AnimateWidget::paintEvent(QPaintEvent* pPaintEvent)
+void SceneWidget::paintEvent(QPaintEvent* pPaintEvent)
 {
     Q_UNUSED(pPaintEvent);
     QPainter painter(this);
@@ -92,4 +89,32 @@ void AnimateWidget::paintEvent(QPaintEvent* pPaintEvent)
     paintLand(painter);
     paintBird(painter);
     paintScore(painter);
+}
+
+
+ProgressWidget::ProgressWidget(QWidget *parent): QWidget(parent), ui(new Ui::ProgressWidget)
+{
+    ui->setupUi(this);
+}
+
+ProgressWidget::~ProgressWidget()
+{
+    delete ui;
+}
+
+void ProgressWidget::setGame(MainGame* pGame)
+{
+    this->pGame = pGame;
+    ui->pScene->setGame(pGame);
+}
+
+void ProgressWidget::setImages(GameImages* pImages)
+{
+    this->pImages = pImages;
+    ui->pScene->setImages(pImages);
+}
+
+void ProgressWidget::setBackground()
+{
+    ui->pBackgroundLabel->setPixmap(pImages->backgroundArray[pGame->getTheme()]);
 }
