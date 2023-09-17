@@ -4,12 +4,12 @@
 #include <QStackedWidget>
 #include <QPushButton>
 
-#include "Models/flappybird.h"
-#include "Widgets/resource.h"
-#include "Widgets/welcome.h"
-#include "Widgets/ready.h"
-#include "Widgets/progress.h"
-#include "Widgets/gameover.h"
+#include "Models/FlappyBird.h"
+#include "Widgets/Resource.h"
+#include "Widgets/Welcome.h"
+#include "Widgets/Prepare.h"
+#include "Widgets/MainLoop.h"
+#include "Widgets/Gameover.h"
 
 class GraphicsWidget : public QStackedWidget
 {
@@ -17,8 +17,8 @@ class GraphicsWidget : public QStackedWidget
 
     private:
         WelcomeWidget* pWelcomeWidget;
-        ReadyWidget* pReadyWidget;
-        ProgressWidget* pPlayingWidget;
+        PrepareWidget* pReadyWidget;
+        MainLoopWidget* pPlayingWidget;
         GameoverWidget* pGameoverWidget;
 
     private:

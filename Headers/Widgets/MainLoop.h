@@ -1,17 +1,17 @@
-#ifndef __WIDGETS_PROGRESS_H__
-#define __WIDGETS_PROGRESS_H__
+#ifndef __WIDGETS_MAINLOOP_H__
+#define __WIDGETS_MAINLOOP_H__
 
 #include <QWidget>
 #include <QPainter>
 
-#include "../Models/flappybird.h"
-#include "../Widgets/resource.h"
+#include "Models/FlappyBird.h"
+#include "Widgets/Resource.h"
 
 QT_BEGIN_NAMESPACE
 
 namespace Ui
 {
-    class ProgressWidget;
+    class MainLoopWidget;
 }
 
 QT_END_NAMESPACE
@@ -50,20 +50,20 @@ class SceneWidget : public QWidget
         void setImages(GameImages*);
 };
 
-class ProgressWidget : public QWidget
+class MainLoopWidget : public QWidget
 {
     Q_OBJECT
 
     private:
-        Ui::ProgressWidget* ui;
+        Ui::MainLoopWidget* ui;
 
     private:
         MainGame* pGame;
         GameImages* pImages;
 
     public:
-        ProgressWidget(QWidget* parent = nullptr);
-        ~ProgressWidget();
+        MainLoopWidget(QWidget* parent = nullptr);
+        ~MainLoopWidget();
 
     public:
         void setGame(MainGame*);

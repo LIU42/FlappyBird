@@ -1,5 +1,5 @@
-#include "mainwindow.h"
-#include "ui_mainwindow.h"
+#include "MainWindow.h"
+#include "ui_MainWindow.h"
 
 MainWindow::MainWindow(QWidget* parent): QMainWindow(parent), ui(new Ui::MainWindow)
 {
@@ -28,7 +28,7 @@ void MainWindow::initialize()
 
 void MainWindow::mainInterval()
 {
-    if (pGame->getStatus() == STATUS_READY || pGame->getStatus() == STATUS_PROGRESS)
+    if (pGame->getStatus() == STATUS_PREPARE || pGame->getStatus() == STATUS_MAINLOOP)
     {
         pGame->updateGame();
 
@@ -76,7 +76,7 @@ void MainWindow::startTimers()
 void MainWindow::gameReadyToPlay()
 {
     pGame->restartGame();
-    ui->pGraphics->setCurrentIndex(STATUS_READY);
+    ui->pGraphics->setCurrentIndex(STATUS_PREPARE);
 }
 
 void MainWindow::gameBirdFlying()
@@ -93,12 +93,12 @@ void MainWindow::mousePressEvent(QMouseEvent* pMouseEvent)
 {
     if (pMouseEvent->button() == Qt::LeftButton)
     {
-        if (pGame->getStatus() == STATUS_READY)
+        if (pGame->getStatus() == STATUS_PREPARE)
         {
-            ui->pGraphics->setCurrentIndex(STATUS_PROGRESS);
+            ui->pGraphics->setCurrentIndex(STATUS_MAINLOOP);
             pGame->playingGame();
         }
-        else if (pGame->getStatus() == STATUS_PROGRESS)
+        else if (pGame->getStatus() == STATUS_MAINLOOP)
         {
             pGame->birdGoingUp();
         }

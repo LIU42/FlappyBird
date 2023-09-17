@@ -1,34 +1,34 @@
-#ifndef __WIDGETS_READY_H__
-#define __WIDGETS_READY_H__
+#ifndef __WIDGETS_PREPARE_H__
+#define __WIDGETS_PREPARE_H__
 
 #include <QWidget>
 
-#include "../Models/flappybird.h"
-#include "../Widgets/resource.h"
+#include "Models/FlappyBird.h"
+#include "Widgets/Resource.h"
 
 QT_BEGIN_NAMESPACE
 
 namespace Ui
 {
-    class ReadyWidget;
+    class PrepareWidget;
 }
 
 QT_END_NAMESPACE
 
-class ReadyWidget : public QWidget
+class PrepareWidget : public QWidget
 {
     Q_OBJECT
 
     private:
-        Ui::ReadyWidget* ui;
+        Ui::PrepareWidget* ui;
 
     private:
         MainGame* pGame;
         GameImages* pImages;
 
     public:
-        ReadyWidget(QWidget* parent = nullptr);
-        ~ReadyWidget();
+        PrepareWidget(QWidget* parent = nullptr);
+        ~PrepareWidget();
 
     public:
         void setGame(MainGame*);

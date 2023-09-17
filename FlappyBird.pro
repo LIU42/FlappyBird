@@ -8,37 +8,39 @@ CONFIG += c++17
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
+INCLUDEPATH += $$PWD/Headers/
+
 SOURCES += \
-	Sources/Models/bird.cpp \
-	Sources/Models/flappybird.cpp \
-	Sources/Models/pipe.cpp \
-	Sources/Widgets/gameover.cpp \
-	Sources/Widgets/progress.cpp \
-	Sources/Widgets/ready.cpp \
-	Sources/Widgets/resource.cpp \
-	Sources/Widgets/welcome.cpp \
-	Sources/graphics.cpp \
-	Sources/main.cpp \
-	Sources/mainwindow.cpp
+	Sources/Models/Bird.cpp \
+	Sources/Models/FlappyBird.cpp \
+	Sources/Models/Pipe.cpp \
+	Sources/Widgets/Gameover.cpp \
+	Sources/Widgets/MainLoop.cpp \
+	Sources/Widgets/Prepare.cpp \
+	Sources/Widgets/Resource.cpp \
+	Sources/Widgets/Welcome.cpp \
+	Sources/Graphics.cpp \
+	Sources/Main.cpp \
+	Sources/MainWindow.cpp
 
 HEADERS += \
-	Sources/Models/bird.h \
-	Sources/Models/flappybird.h \
-	Sources/Models/pipe.h \
-	Sources/Widgets/gameover.h \
-	Sources/Widgets/progress.h \
-	Sources/Widgets/ready.h \
-	Sources/Widgets/resource.h \
-	Sources/Widgets/welcome.h \
-	Sources/graphics.h \
-	Sources/mainwindow.h
+	Headers/Models/Bird.h \
+	Headers/Models/FlappyBird.h \
+	Headers/Models/Pipe.h \
+	Headers/Widgets/Gameover.h \
+	Headers/Widgets/MainLoop.h \
+	Headers/Widgets/Prepare.h \
+	Headers/Widgets/Resource.h \
+	Headers/Widgets/Welcome.h \
+	Headers/Graphics.h \
+	Headers/MainWindow.h
 
 FORMS += \
-	Forms/Widgets/progress.ui \
-	Forms/Widgets/welcome.ui \
-	Forms/mainwindow.ui \
-	Forms/Widgets/ready.ui \
-	Forms/Widgets/gameover.ui
+	Forms/Widgets/Gameover.ui \
+	Forms/Widgets/MainLoop.ui \
+	Forms/Widgets/Prepare.ui \
+	Forms/Widgets/Welcome.ui \
+	Forms/MainWindow.ui
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
@@ -46,6 +48,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 RESOURCES += \
-	Resources/resources.qrc
+	Resources/Resources.qrc
 
 RC_ICONS += Resources/Images/icon.ico

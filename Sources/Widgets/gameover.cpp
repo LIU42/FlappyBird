@@ -1,7 +1,5 @@
-#include "gameover.h"
-#include "ui_gameover.h"
-
-#include <QDebug>
+#include "Widgets/Gameover.h"
+#include "ui_Gameover.h"
 
 ScoreWidget::ScoreWidget(QWidget* parent): QWidget(parent)
 {

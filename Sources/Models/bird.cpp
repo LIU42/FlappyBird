@@ -1,4 +1,4 @@
-#include "bird.h"
+#include "Models/Bird.h"
 
 BirdColor Bird::getRandomColor()
 {

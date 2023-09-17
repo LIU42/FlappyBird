@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ProgressWidget</class>
- <widget class="QWidget" name="ProgressWidget">
+ <class>PrepareWidget</class>
+ <widget class="QWidget" name="PrepareWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -17,6 +17,22 @@
    <string notr="true">background-repeat: no-repeat;
 background-position: center;</string>
   </property>
+  <widget class="QLabel" name="pTitleLabel">
+   <property name="geometry">
+    <rect>
+     <x>125</x>
+     <y>175</y>
+     <width>200</width>
+     <height>60</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/ready.png);</string>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
   <widget class="QLabel" name="pBackgroundLabel">
    <property name="geometry">
     <rect>
@@ -25,6 +41,22 @@ background-position: center;</string>
      <width>450</width>
      <height>700</height>
     </rect>
+   </property>
+   <property name="text">
+    <string/>
+   </property>
+  </widget>
+  <widget class="QLabel" name="pTutorialLabel">
+   <property name="geometry">
+    <rect>
+     <x>165</x>
+     <y>455</y>
+     <width>120</width>
+     <height>110</height>
+    </rect>
+   </property>
+   <property name="styleSheet">
+    <string notr="true">background-image: url(:/Images/tutorial.png);</string>
    </property>
    <property name="text">
     <string/>
@@ -40,12 +72,16 @@ background-position: center;</string>
     </rect>
    </property>
   </widget>
+  <zorder>pBackgroundLabel</zorder>
+  <zorder>pTitleLabel</zorder>
+  <zorder>pTutorialLabel</zorder>
+  <zorder>pScene</zorder>
  </widget>
  <customwidgets>
   <customwidget>
    <class>SceneWidget</class>
    <extends>QWidget</extends>
-   <header>progress.h</header>
+   <header>Widgets/mainloop.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

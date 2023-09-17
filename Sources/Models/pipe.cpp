@@ -1,4 +1,4 @@
-#include "pipe.h"
+#include "Models/Pipe.h"
 
 Pipe::Pipe(int channelLarge)
 {

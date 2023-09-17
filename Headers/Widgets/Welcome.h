@@ -4,8 +4,8 @@
 #include <QWidget>
 #include <QPushButton>
 
-#include "../Models/flappybird.h"
-#include "../Widgets/resource.h"
+#include "Models/FlappyBird.h"
+#include "Widgets/Resource.h"
 
 QT_BEGIN_NAMESPACE
 

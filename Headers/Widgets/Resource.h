@@ -8,8 +8,8 @@ class GameImages
     friend class GraphicsWidget;
     friend class SceneWidget;
     friend class WelcomeWidget;
-    friend class ReadyWidget;
-    friend class ProgressWidget;
+    friend class PrepareWidget;
+    friend class MainLoopWidget;
     friend class GameoverWidget;
     friend class ScoreWidget;
 

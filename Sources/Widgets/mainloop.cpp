@@ -1,5 +1,5 @@
-#include "progress.h"
-#include "ui_progress.h"
+#include "Widgets/MainLoop.h"
+#include "ui_MainLoop.h"
 
 SceneWidget::SceneWidget(QWidget* parent): QWidget{parent}
 {
@@ -52,7 +52,7 @@ void SceneWidget::paintPipes(QPainter& painter)
 
 void SceneWidget::paintScore(QPainter& painter)
 {
-    if (pGame->getStatus() == STATUS_PROGRESS)
+    if (pGame->getStatus() == STATUS_MAINLOOP)
     {
         int scoreValue = pGame->getCurrentScore();
         int scoreLength = 0;
@@ -92,29 +92,29 @@ void SceneWidget::paintEvent(QPaintEvent* pPaintEvent)
 }
 
 
-ProgressWidget::ProgressWidget(QWidget *parent): QWidget(parent), ui(new Ui::ProgressWidget)
+MainLoopWidget::MainLoopWidget(QWidget *parent): QWidget(parent), ui(new Ui::MainLoopWidget)
 {
     ui->setupUi(this);
 }
 
-ProgressWidget::~ProgressWidget()
+MainLoopWidget::~MainLoopWidget()
 {
     delete ui;
 }
 
-void ProgressWidget::setGame(MainGame* pGame)
+void MainLoopWidget::setGame(MainGame* pGame)
 {
     this->pGame = pGame;
     ui->pScene->setGame(pGame);
 }
 
-void ProgressWidget::setImages(GameImages* pImages)
+void MainLoopWidget::setImages(GameImages* pImages)
 {
     this->pImages = pImages;
     ui->pScene->setImages(pImages);
 }
 
-void ProgressWidget::setBackground()
+void MainLoopWidget::setBackground()
 {
     ui->pBackgroundLabel->setPixmap(pImages->backgroundArray[pGame->getTheme()]);
 }

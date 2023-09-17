@@ -3,8 +3,8 @@
 
 #include <QList>
 
-#include "bird.h"
-#include "pipe.h"
+#include "Models/Bird.h"
+#include "Models/Pipe.h"
 
 using PipeList = QList<Pipe>;
 
@@ -17,8 +17,8 @@ enum GameTheme
 enum GameStatus
 {
     STATUS_WELCOME,
-    STATUS_READY,
-    STATUS_PROGRESS,
+    STATUS_PREPARE,
+    STATUS_MAINLOOP,
     STATUS_GAMEOVER
 };
 

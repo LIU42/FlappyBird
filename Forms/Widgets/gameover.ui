@@ -144,7 +144,7 @@ border: 0px;</string>
   <customwidget>
    <class>ScoreWidget</class>
    <extends>QWidget</extends>
-   <header>gameover.h</header>
+   <header>Widgets/Gameover.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

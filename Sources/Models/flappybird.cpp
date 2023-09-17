@@ -1,4 +1,4 @@
-#include "flappybird.h"
+#include "Models/FlappyBird.h"
 
 MainGame::MainGame()
 {
@@ -149,7 +149,7 @@ void MainGame::restartGame()
 {
     bird.initialize();
     pipeList.clear();
-    status = STATUS_READY;
+    status = STATUS_PREPARE;
     pipeChannelLarge = Pipe::CHANNEL_LARGE_ORIGIN_LEVEL;
     currentScore = 0;
     landScrollX = 0;
@@ -159,7 +159,7 @@ void MainGame::restartGame()
 
 void MainGame::updateGame()
 {
-    if (status == STATUS_PROGRESS)
+    if (status == STATUS_MAINLOOP)
     {
         levelUp();
         updateBird();
@@ -170,7 +170,7 @@ void MainGame::updateGame()
 
 void MainGame::playingGame()
 {
-    status = STATUS_PROGRESS;
+    status = STATUS_MAINLOOP;
 }
 
 int MainGame::getLandScrollX()
@@ -185,7 +185,7 @@ bool MainGame::getIsNewRecord()
 
 void MainGame::addNewPipe()
 {
-    if (status == STATUS_PROGRESS && bird.getIsAlive())
+    if (status == STATUS_MAINLOOP && bird.getIsAlive())
     {
         pipeList.append(Pipe(pipeChannelLarge));
     }
@@ -193,7 +193,7 @@ void MainGame::addNewPipe()
 
 void MainGame::birdFlying()
 {
-    if (status == STATUS_READY || status == STATUS_PROGRESS)
+    if (status == STATUS_PREPARE || status == STATUS_MAINLOOP)
     {
         bird.flying();
     }
@@ -201,7 +201,7 @@ void MainGame::birdFlying()
 
 void MainGame::birdGoingUp()
 {
-    if (status == STATUS_PROGRESS && bird.getIsAlive())
+    if (status == STATUS_MAINLOOP && bird.getIsAlive())
     {
         bird.goingUp();
     }

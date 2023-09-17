@@ -1,10 +1,10 @@
-#include "graphics.h"
+#include "Graphics.h"
 
 GraphicsWidget::GraphicsWidget(QWidget* parent): QStackedWidget(parent)
 {
     pWelcomeWidget = new WelcomeWidget(this);
-    pReadyWidget = new ReadyWidget(this);
-    pPlayingWidget = new ProgressWidget(this);
+    pReadyWidget = new PrepareWidget(this);
+    pPlayingWidget = new MainLoopWidget(this);
     pGameoverWidget = new GameoverWidget(this);
 
     setImages();

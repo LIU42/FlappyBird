@@ -6,7 +6,7 @@
 #include <QMouseEvent>
 #include <QTimer>
 
-#include "Models/flappybird.h"
+#include "Models/FlappyBird.h"
 
 QT_BEGIN_NAMESPACE
 
