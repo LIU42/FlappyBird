@@ -5,9 +5,9 @@
 #include <QPushButton>
 
 #include "Models/FlappyBird.h"
-#include "Widgets/Resource.h"
+#include "Resources/Images.h"
 #include "Widgets/Welcome.h"
-#include "Widgets/Prepare.h"
+#include "Widgets/GetReady.h"
 #include "Widgets/MainLoop.h"
 #include "Widgets/Gameover.h"
 
@@ -17,7 +17,7 @@ class GraphicsWidget : public QStackedWidget
 
     private:
         WelcomeWidget* pWelcomeWidget;
-        PrepareWidget* pReadyWidget;
+        GetReadyWidget* pReadyWidget;
         MainLoopWidget* pPlayingWidget;
         GameoverWidget* pGameoverWidget;
 

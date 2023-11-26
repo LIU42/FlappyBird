@@ -5,7 +5,7 @@
 #include <QPainter>
 
 #include "Models/FlappyBird.h"
-#include "Widgets/Resource.h"
+#include "Resources/Images.h"
 
 QT_BEGIN_NAMESPACE
 

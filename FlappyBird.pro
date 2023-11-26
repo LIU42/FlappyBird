@@ -14,10 +14,10 @@ SOURCES += \
 	Sources/Models/Bird.cpp \
 	Sources/Models/FlappyBird.cpp \
 	Sources/Models/Pipe.cpp \
+	Sources/Resources/Images.cpp \
 	Sources/Widgets/Gameover.cpp \
+	Sources/Widgets/GetReady.cpp \
 	Sources/Widgets/MainLoop.cpp \
-	Sources/Widgets/Prepare.cpp \
-	Sources/Widgets/Resource.cpp \
 	Sources/Widgets/Welcome.cpp \
 	Sources/Graphics.cpp \
 	Sources/Main.cpp \
@@ -27,18 +27,18 @@ HEADERS += \
 	Headers/Models/Bird.h \
 	Headers/Models/FlappyBird.h \
 	Headers/Models/Pipe.h \
+	Headers/Resources/Images.h \
 	Headers/Widgets/Gameover.h \
+	Headers/Widgets/GetReady.h \
 	Headers/Widgets/MainLoop.h \
-	Headers/Widgets/Prepare.h \
-	Headers/Widgets/Resource.h \
 	Headers/Widgets/Welcome.h \
 	Headers/Graphics.h \
 	Headers/MainWindow.h
 
 FORMS += \
 	Forms/Widgets/Gameover.ui \
+	Forms/Widgets/GetReady.ui \
 	Forms/Widgets/MainLoop.ui \
-	Forms/Widgets/Prepare.ui \
 	Forms/Widgets/Welcome.ui \
 	Forms/MainWindow.ui
 

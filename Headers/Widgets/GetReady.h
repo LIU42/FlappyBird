@@ -4,31 +4,31 @@
 #include <QWidget>
 
 #include "Models/FlappyBird.h"
-#include "Widgets/Resource.h"
+#include "Resources/Images.h"
 
 QT_BEGIN_NAMESPACE
 
 namespace Ui
 {
-    class PrepareWidget;
+class GetReadyWidget;
 }
 
 QT_END_NAMESPACE
 
-class PrepareWidget : public QWidget
+class GetReadyWidget : public QWidget
 {
     Q_OBJECT
 
     private:
-        Ui::PrepareWidget* ui;
+        Ui::GetReadyWidget* ui;
 
     private:
         MainGame* pGame;
         GameImages* pImages;
 
     public:
-        PrepareWidget(QWidget* parent = nullptr);
-        ~PrepareWidget();
+        GetReadyWidget(QWidget* parent = nullptr);
+        ~GetReadyWidget();
 
     public:
         void setGame(MainGame*);

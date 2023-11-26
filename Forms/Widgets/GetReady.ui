@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>PrepareWidget</class>
- <widget class="QWidget" name="PrepareWidget">
+ <class>GetReadyWidget</class>
+ <widget class="QWidget" name="GetReadyWidget">
   <property name="geometry">
    <rect>
     <x>0</x>
@@ -81,7 +81,7 @@ background-position: center;</string>
   <customwidget>
    <class>SceneWidget</class>
    <extends>QWidget</extends>
-   <header>Widgets/mainloop.h</header>
+   <header>Widgets/MainLoop.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>

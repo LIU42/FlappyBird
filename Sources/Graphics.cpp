@@ -3,7 +3,7 @@
 GraphicsWidget::GraphicsWidget(QWidget* parent): QStackedWidget(parent)
 {
     pWelcomeWidget = new WelcomeWidget(this);
-    pReadyWidget = new PrepareWidget(this);
+    pReadyWidget = new GetReadyWidget(this);
     pPlayingWidget = new MainLoopWidget(this);
     pGameoverWidget = new GameoverWidget(this);
 

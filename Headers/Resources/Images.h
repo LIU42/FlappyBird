@@ -1,5 +1,5 @@
-#ifndef __WIDGETS_RESOURCE_H__
-#define __WIDGETS_RESOURCE_H__
+#ifndef __RESOURCES_IMAGES_H__
+#define __RESOURCES_IMAGES_H__
 
 #include <QPixmap>
 
