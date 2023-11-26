@@ -14,7 +14,7 @@ SOURCES += \
 	Sources/Models/Bird.cpp \
 	Sources/Models/FlappyBird.cpp \
 	Sources/Models/Pipe.cpp \
-	Sources/Resources/Images.cpp \
+	Sources/Resources/GameImages.cpp \
 	Sources/Widgets/Gameover.cpp \
 	Sources/Widgets/GetReady.cpp \
 	Sources/Widgets/MainLoop.cpp \
@@ -27,7 +27,7 @@ HEADERS += \
 	Headers/Models/Bird.h \
 	Headers/Models/FlappyBird.h \
 	Headers/Models/Pipe.h \
-	Headers/Resources/Images.h \
+	Headers/Resources/GameImages.h \
 	Headers/Widgets/Gameover.h \
 	Headers/Widgets/GetReady.h \
 	Headers/Widgets/MainLoop.h \

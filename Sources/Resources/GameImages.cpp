@@ -1,4 +1,4 @@
-#include "Widgets/Resource.h"
+#include "Resources/GameImages.h"
 
 GameImages::GameImages()
 {

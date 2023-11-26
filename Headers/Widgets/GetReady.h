@@ -4,7 +4,7 @@
 #include <QWidget>
 
 #include "Models/FlappyBird.h"
-#include "Resources/Images.h"
+#include "Resources/GameImages.h"
 
 QT_BEGIN_NAMESPACE
 

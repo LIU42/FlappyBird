@@ -19,12 +19,10 @@ QT_END_NAMESPACE
 
 class GameTimers
 {
-    friend class MainWindow;
-
-    private:
+    public:
         static constexpr int GAME_FPS = 60;
 
-    private:
+    public:
         QTimer mainInterval;
         QTimer birdFlying;
         QTimer addNewPipe;

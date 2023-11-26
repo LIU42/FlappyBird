@@ -5,7 +5,7 @@
 #include <QPushButton>
 
 #include "Models/FlappyBird.h"
-#include "Resources/Images.h"
+#include "Resources/GameImages.h"
 #include "Widgets/Welcome.h"
 #include "Widgets/GetReady.h"
 #include "Widgets/MainLoop.h"
