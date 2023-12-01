@@ -31,8 +31,8 @@ class GetReadyWidget : public QWidget
         ~GetReadyWidget();
 
     public:
-        void setGame(MainGame*);
-        void setImages(GameImages*);
+        void setGame(MainGame* pGame);
+        void setImages(GameImages* pImages);
         void setBackground();
 };
 #endif

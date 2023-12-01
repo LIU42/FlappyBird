@@ -44,10 +44,10 @@ class Bird
         void initialize();
         void flying();
         void goingUp();
-        void gravityDown(double);
+        void gravityDown(double gravityPower);
         void moveVertical();
         void setIsCrashed();
-        void setIsDown(int);
+        void setIsDown(int landSurfaceY);
 
     public:
         BirdColor getColor();

@@ -33,14 +33,14 @@ class ScoreWidget : public QWidget
         int scoreValue;
 
     private:
-        void paintEvent(QPaintEvent*);
+        void paintEvent(QPaintEvent* pPaintEvent);
 
     public:
         ScoreWidget(QWidget* parent = nullptr);
 
     public:
-        void setImages(GameImages*);
-        void setScoreValue(int);
+        void setImages(GameImages* pImages);
+        void setScoreValue(int scoreValue);
 };
 
 class GameoverWidget : public QWidget
@@ -64,8 +64,8 @@ class GameoverWidget : public QWidget
         ~GameoverWidget();
 
     public:
-        void setGame(MainGame*);
-        void setImages(GameImages*);
+        void setGame(MainGame* pGame);
+        void setImages(GameImages* pImages);
         void setBackground();
         void setPanelInfo();
 

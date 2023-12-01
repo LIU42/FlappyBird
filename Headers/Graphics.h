@@ -36,7 +36,7 @@ class GraphicsWidget : public QStackedWidget
         ~GraphicsWidget();
 
     public:
-        void setGame(MainGame*);
+        void setGame(MainGame* pGame);
         void setBackground();
         void setPanelInfo();
 

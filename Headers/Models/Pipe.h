@@ -31,10 +31,10 @@ class Pipe
         int getRandomChannelCenterY();
 
     public:
-        Pipe(int);
+        Pipe(int channelLarge);
 
     public:
-        void moveHorizon(int);
+        void moveHorizon(int speed);
         void setIsThrough();
 
     public:

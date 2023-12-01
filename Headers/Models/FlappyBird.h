@@ -17,7 +17,7 @@ enum GameTheme
 enum GameStatus
 {
     STATUS_WELCOME,
-    STATUS_PREPARE,
+    STATUS_GETREADY,
     STATUS_MAINLOOP,
     STATUS_GAMEOVER
 };

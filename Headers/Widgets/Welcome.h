@@ -32,8 +32,8 @@ class WelcomeWidget : public QWidget
         ~WelcomeWidget();
 
     public:
-        void setGame(MainGame*);
-        void setImages(GameImages*);
+        void setGame(MainGame* pGame);
+        void setImages(GameImages* pImages);
         void setBackground();
 
     public:

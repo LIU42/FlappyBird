@@ -34,20 +34,20 @@ class SceneWidget : public QWidget
         GameImages* pImages;
 
     private:
-        void paintBird(QPainter&);
-        void paintLand(QPainter&);
-        void paintPipes(QPainter&);
-        void paintScore(QPainter&);
+        void paintBird(QPainter& painter);
+        void paintLand(QPainter& painter);
+        void paintPipes(QPainter& painter);
+        void paintScore(QPainter& painter);
 
     private:
-        void paintEvent(QPaintEvent*);
+        void paintEvent(QPaintEvent* pPaintEvent);
 
     public:
         SceneWidget(QWidget* parent = nullptr);
 
     public:
-        void setGame(MainGame*);
-        void setImages(GameImages*);
+        void setGame(MainGame* pGame);
+        void setImages(GameImages* pImages);
 };
 
 class MainLoopWidget : public QWidget
@@ -66,8 +66,8 @@ class MainLoopWidget : public QWidget
         ~MainLoopWidget();
 
     public:
-        void setGame(MainGame*);
-        void setImages(GameImages*);
+        void setGame(MainGame* pGame);
+        void setImages(GameImages* pImages);
         void setBackground();
 };
 #endif

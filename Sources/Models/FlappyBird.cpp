@@ -149,7 +149,7 @@ void MainGame::restartGame()
 {
     bird.initialize();
     pipeList.clear();
-    status = STATUS_PREPARE;
+    status = STATUS_GETREADY;
     pipeChannelLarge = Pipe::CHANNEL_LARGE_ORIGIN_LEVEL;
     currentScore = 0;
     landScrollX = 0;
@@ -193,7 +193,7 @@ void MainGame::addNewPipe()
 
 void MainGame::birdFlying()
 {
-    if (status == STATUS_PREPARE || status == STATUS_MAINLOOP)
+    if (status == STATUS_GETREADY || status == STATUS_MAINLOOP)
     {
         bird.flying();
     }

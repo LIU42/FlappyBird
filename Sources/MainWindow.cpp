@@ -28,7 +28,7 @@ void MainWindow::initialize()
 
 void MainWindow::mainInterval()
 {
-    if (pGame->getStatus() == STATUS_PREPARE || pGame->getStatus() == STATUS_MAINLOOP)
+    if (pGame->getStatus() == STATUS_GETREADY || pGame->getStatus() == STATUS_MAINLOOP)
     {
         pGame->updateGame();
 
@@ -76,7 +76,7 @@ void MainWindow::startTimers()
 void MainWindow::gameReadyToPlay()
 {
     pGame->restartGame();
-    ui->pGraphics->setCurrentIndex(STATUS_PREPARE);
+    ui->pGraphics->setCurrentIndex(STATUS_GETREADY);
 }
 
 void MainWindow::gameBirdFlying()
@@ -93,7 +93,7 @@ void MainWindow::mousePressEvent(QMouseEvent* pMouseEvent)
 {
     if (pMouseEvent->button() == Qt::LeftButton)
     {
-        if (pGame->getStatus() == STATUS_PREPARE)
+        if (pGame->getStatus() == STATUS_GETREADY)
         {
             ui->pGraphics->setCurrentIndex(STATUS_MAINLOOP);
             pGame->playingGame();

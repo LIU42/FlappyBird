@@ -54,14 +54,14 @@ class MainWindow : public QMainWindow
         void gameBirdGoingUp();
 
     private:
-        void mousePressEvent(QMouseEvent*);
+        void mousePressEvent(QMouseEvent* pMouseEvent);
 
     public:
         MainWindow(QWidget* parent = nullptr);
         ~MainWindow();
 
     public:
-        void setGame(MainGame*);
+        void setGame(MainGame* pGame);
         void initialize();
 };
 #endif
